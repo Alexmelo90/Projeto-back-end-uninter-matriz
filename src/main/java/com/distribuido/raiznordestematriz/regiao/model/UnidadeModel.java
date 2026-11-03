@@ -1,0 +1,16 @@
+package com.distribuido.raiznordestematriz.regiao.model;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name = "unidade")
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+public class UnidadeModel {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private Long regiaoId;
+    private String nome;
+    @Enumerated(EnumType.STRING)
+    private TipoCozinha tipoCozinha;
+}
